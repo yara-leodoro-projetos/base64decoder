@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/iara/C++/Imagebase64/build",
+  "command": "/bin/g++-7   -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/base64decoder.cpp.o -c /home/iara/C++/Imagebase64/base64decoder.cpp",
+  "file": "/home/iara/C++/Imagebase64/base64decoder.cpp"
+}
+]
