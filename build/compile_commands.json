@@ -1,7 +1,13 @@
 [
 {
   "directory": "/home/iara/C++/Imagebase64/build",
-  "command": "/bin/g++-7  -DPOCO_ENABLE_CPP11 -DPOCO_ENABLE_CPP14 -DPOCO_HAVE_FD_EPOLL -DPOCO_OS_FAMILY_UNIX -D_DEBUG -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D_THREAD_SAFE -D_XOPEN_SOURCE=500 -I../B64/include -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/teste.cpp.o -c /home/iara/C++/Imagebase64/teste.cpp",
-  "file": "/home/iara/C++/Imagebase64/teste.cpp"
+  "command": "/bin/g++-7  -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/include -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/base64CPPREST.cpp.o -c /home/iara/C++/Imagebase64/base64CPPREST.cpp",
+  "file": "/home/iara/C++/Imagebase64/base64CPPREST.cpp"
+},
+
+{
+  "directory": "/home/iara/C++/Imagebase64/build",
+  "command": "/bin/g++-7  -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/include -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/main.cpp.o -c /home/iara/C++/Imagebase64/main.cpp",
+  "file": "/home/iara/C++/Imagebase64/main.cpp"
 }
 ]

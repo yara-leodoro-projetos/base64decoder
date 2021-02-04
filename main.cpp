@@ -4,10 +4,12 @@
 #include <string>
 #include <opencv4/opencv2/opencv.hpp>
 #include <chrono>
-// #include "decoder.hpp"
+#include "base64CPPREST.hpp"
 
 using namespace std;
 using namespace std::chrono;
+using namespace utility::conversions;
+
 
 typedef high_resolution_clock Clock;
 typedef Clock::time_point ClockTime;
@@ -37,20 +39,42 @@ void printExecutionTime(ClockTime start_time, ClockTime end_time)
     cout << endl;
 }
 
-int main(int, char **)
+// int main(int, char **)
+// {
+//     std::ifstream file("/home/bruno/b64-cpp/b64_img");
+//     std::string b64;
+//     std::getline(file, b64);
+//     // Base64 decoder;
+
+//     ClockTime start = Clock::now();
+//     for (size_t i = 0; i < 1000; i++)
+//     {
+//         cv::Mat img;
+//         auto decoded = decoder.decode(b64);
+//         img = cv::imdecode(decoded, cv::IMREAD_COLOR); /* code */
+//     }
+//     ClockTime end = Clock::now();
+//     printExecutionTime(start, end);
+// }
+
+int main(int argc, char const *argv[])
 {
-    std::ifstream file("/home/bruno/b64-cpp/b64_img");
-    std::string b64;
-    std::getline(file, b64);
-    Base64 decoder;
+    std::string encoded_string;
+
+    std::ifstream ofs("/home/iara/C++/Imagebase64/b64");
+    std::getline(ofs, encoded_string);
+    ofs.close();
+
 
     ClockTime start = Clock::now();
     for (size_t i = 0; i < 1000; i++)
     {
-        cv::Mat img;
-        auto decoded = decoder.decode(b64);
-        img = cv::imdecode(decoded, cv::IMREAD_COLOR); /* code */
+        auto image = utility::conversions::from_base64(encoded_string);
+
+        cv::Mat imagew = cv::imdecode(image, cv::IMREAD_COLOR);
     }
     ClockTime end = Clock::now();
     printExecutionTime(start, end);
+
+    return 0;
 }

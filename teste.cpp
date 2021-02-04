@@ -1,6 +1,9 @@
 #include <iostream>
 #include <opencv4/opencv2/opencv.hpp>
 #include <fstream>
+#include <cstddef>
+
+unsigned char bytes[]= {0x43,0x4d,0x30,0x30,0x0f,0x0D};
 
 static const std::string base64_chars =
              "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -101,6 +104,7 @@ int main(int argc, char const *argv[])
 {
 
   std::string encoded_string ;
+  std::string name;
 
   std::ifstream ofs("/home/iara/C++/Imagebase64/b64");
     
@@ -108,11 +112,18 @@ int main(int argc, char const *argv[])
   ofs.close();
 
   std::string decoded_string = base64_decode(encoded_string);
-  std::vector<uchar> data(decoded_string.begin(), decoded_string.end());
 
-  cv::Mat image = cv::imdecode(cv::Mat(data), cv::IMREAD_COLOR);
-  cv::imshow("Image64", image);
-  cv::waitKey(0);
+  std::string decoded = base64_encode(reinterpret_cast<const unsigned char*>(decoded_string.c_str()), decoded_string.length());
+
+  //teste
+
+ 
+  std::vector<unsigned char> vectordata(decoded.begin(), decoded.end());
+  cv::Mat data_mat(vectordata, true);
+
+  cv::Mat image(cv::imdecode(data_mat, 1));
+  // cv::imshow("Image", image);
+  // cv::waitKey(0);
 
   return 0;
 }

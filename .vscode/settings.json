@@ -60,6 +60,13 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "codecvt": "cpp",
+        "filesystem": "cpp",
+        "future": "cpp",
+        "cfenv": "cpp",
+        "*.a": "cpp"
     }
 }
