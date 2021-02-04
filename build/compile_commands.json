@@ -1,13 +1,7 @@
 [
 {
   "directory": "/home/iara/C++/Imagebase64/build",
-  "command": "/bin/g++-7  -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/base64CPPREST.cpp.o -c /home/iara/C++/Imagebase64/base64CPPREST.cpp",
-  "file": "/home/iara/C++/Imagebase64/base64CPPREST.cpp"
-},
-
-{
-  "directory": "/home/iara/C++/Imagebase64/build",
-  "command": "/bin/g++-7  -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/main.cpp.o -c /home/iara/C++/Imagebase64/main.cpp",
-  "file": "/home/iara/C++/Imagebase64/main.cpp"
+  "command": "/bin/g++-7  -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I../B64/include -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/base64decoder.dir/libb64.cpp.o -c /home/iara/C++/Imagebase64/libb64.cpp",
+  "file": "/home/iara/C++/Imagebase64/libb64.cpp"
 }
 ]
