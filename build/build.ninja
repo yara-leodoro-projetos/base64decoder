@@ -269,7 +269,7 @@ build CMakeFiles/base64decoder.dir/base64CPPREST.cpp.o: CXX_COMPILER__base64deco
   DEFINES = -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS
   DEP_FILE = CMakeFiles/base64decoder.dir/base64CPPREST.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/include -isystem /usr/local/include/opencv4
+  INCLUDES = -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/base64decoder.dir
   OBJECT_FILE_DIR = CMakeFiles/base64decoder.dir
 
@@ -277,7 +277,7 @@ build CMakeFiles/base64decoder.dir/main.cpp.o: CXX_COMPILER__base64decoder ../ma
   DEFINES = -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS
   DEP_FILE = CMakeFiles/base64decoder.dir/main.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/include -isystem /usr/local/include/opencv4
+  INCLUDES = -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/base64decoder.dir
   OBJECT_FILE_DIR = CMakeFiles/base64decoder.dir
 

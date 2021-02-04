@@ -6,10 +6,9 @@ find_package(cpprestsdk REQUIRED)
 
 include(CTest)
 enable_testing()
-include_directories( ${OpenCV_INCLUDE_DIRS} ${B64INCLUDE}/include)
 
 add_executable(base64decoder base64CPPREST.cpp
-                              main.cpp)
+                             main.cpp)
 
 target_link_libraries(base64decoder PRIVATE cpprestsdk::cpprest
 ${OpenCV_LIBS})
