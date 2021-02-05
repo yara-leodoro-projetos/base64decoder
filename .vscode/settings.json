@@ -67,6 +67,7 @@
         "filesystem": "cpp",
         "future": "cpp",
         "cfenv": "cpp",
-        "*.a": "cpp"
+        "*.a": "cpp",
+        "*.ipp": "cpp"
     }
 }

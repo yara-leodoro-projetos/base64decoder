@@ -39,24 +39,6 @@ void printExecutionTime(ClockTime start_time, ClockTime end_time)
     cout << endl;
 }
 
-// int main(int, char **)
-// {
-//     std::ifstream file("/home/bruno/b64-cpp/b64_img");
-//     std::string b64;
-//     std::getline(file, b64);
-//     // Base64 decoder;
-
-//     ClockTime start = Clock::now();
-//     for (size_t i = 0; i < 1000; i++)
-//     {
-//         cv::Mat img;
-//         auto decoded = decoder.decode(b64);
-//         img = cv::imdecode(decoded, cv::IMREAD_COLOR); /* code */
-//     }
-//     ClockTime end = Clock::now();
-//     printExecutionTime(start, end);
-// }
-
 int main(int argc, char const *argv[])
 {
     std::string encoded_string;
@@ -67,11 +49,9 @@ int main(int argc, char const *argv[])
 
 
     ClockTime start = Clock::now();
-    for (size_t i = 0; i < 1000; i++)
+    for (size_t i = 0; i < 100; i++)
     {
-        auto image = utility::conversions::from_base64(encoded_string);
-
-        cv::Mat imagew = cv::imdecode(image, cv::IMREAD_COLOR);
+       std::vector<uchar> image = utility::conversions::from_base64(encoded_string);
     }
     ClockTime end = Clock::now();
     printExecutionTime(start, end);
